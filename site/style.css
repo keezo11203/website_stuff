@@ -42,3 +42,7 @@ nav {
     color: #B0E0E6;
   }
   
+  h1 {
+    text-align: center; /* Center the text horizontally */
+  }
+  
