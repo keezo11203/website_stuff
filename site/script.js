@@ -29,3 +29,18 @@ function getCounterWithSuffix(count) {
   }
   return count + suffix;
 }
+
+const sections = document.querySelectorAll('section');
+const navHeight = document.querySelector('nav').offsetHeight;
+
+for (let i = 0; i < sections.length; i++) {
+  const section = sections[i];
+
+  section.addEventListener('click', () => {
+    const sectionTop = section.offsetTop;
+    window.scrollTo({
+      top: sectionTop - navHeight,
+      behavior: 'smooth'
+    });
+  });
+}

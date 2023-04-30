@@ -65,3 +65,6 @@ nav {
     margin-top: 0.5em;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }  
