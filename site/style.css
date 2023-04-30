@@ -46,3 +46,22 @@ nav {
     text-align: center; /* Center the text horizontally */
   }
   
+  .scoreboard {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .scoreboard h1 {
+    font-size: 5em;
+  }
+  
+  .scoreboard p {
+    font-size: 3em;
+    margin-top: 0.5em;
+  }
+  

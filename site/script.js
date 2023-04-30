@@ -1,4 +1,3 @@
-let counter = parseInt(localStorage.getItem('counter')) || 0;
-counter++;
-localStorage.setItem('counter', counter);
-document.getElementById('counter').textContent = counter;
+let counter = parseInt(localStorage.getItem('counter')) || 1;
+localStorage.setItem('counter', counter + 1);
+document.getElementById('counter').textContent = counter + 'th';
