@@ -92,9 +92,6 @@ h1 {
 .about p {
   font-size: 1.5em;
   margin: 2em;
-}
-
-.fade-in {
   opacity: 0;
   animation: fadeIn ease-in 1;
   animation-fill-mode: forwards;
