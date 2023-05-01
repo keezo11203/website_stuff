@@ -6,7 +6,6 @@ body {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-  scroll-snap-align: start;
 }
 
 .fade-in.visible {
@@ -22,6 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  scroll-snap-align: start;
 }
 
 .scoreboard h1 {
@@ -40,6 +40,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  scroll-snap-align: start;
 }
 
 nav a {
@@ -57,55 +58,55 @@ nav ul {
   width: 100%;
   text-align: center;
   scroll-snap-type: y mandatory;
-  }
-  
-  nav li {
+}
+
+nav li {
   margin: 0 10px;
   scroll-snap-align: center;
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
   color: #B0E0E6;
   background-color: #fff;
   transition: color 0.2s ease-in-out;
-  }
-  
-  nav a[href^="http://"], nav a[href^="https://"] {
+}
+
+nav a[href^="http://"], nav a[href^="https://"] {
   color: #000;
-  }
-  
-  nav a[href^="http://"]:hover, nav a[href^="https://"]:hover {
+}
+
+nav a[href^="http://"]:hover, nav a[href^="https://"]:hover {
   color: #B0E0E6;
-  }
-  
-  h1 {
+}
+
+h1 {
   text-align: center;
   scroll-snap-align: center;
-  }
-  
-  .about {
+}
+
+.about {
   height: 100vh;
   scroll-snap-align: start;
-  }
-  
-  .about p {
+}
+
+.about p {
   font-size: 1.5em;
   margin: 2em;
-  scroll-snap-align: start;
-  }
-  
-  .fade-in {
+}
+
+.fade-in {
   opacity: 0;
   animation: fadeIn ease-in 1;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  }
-  
-  @keyframes fadeIn {
+  scroll-snap-align: start;
+}
+
+@keyframes fadeIn {
   0% {
-  opacity: 0;
+    opacity: 0;
   }
   100% {
-  opacity: 1;
+    opacity: 1;
   }
-  }
+}
