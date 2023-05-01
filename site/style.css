@@ -45,3 +45,7 @@ nav a[href^="http://"]:hover, nav a[href^="https://"]:hover {
 h1 {
   text-align: center; /* Center the text horizontally */
 }
+
+body {
+  scroll-snap-type: y mandatory;
+}
