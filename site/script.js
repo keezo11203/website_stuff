@@ -32,14 +32,14 @@ window.addEventListener('scroll', () => {
   for (let i = 0; i < paragraphs.length; i++) {
     const p = paragraphs[i];
     const index = parseInt(p.getAttribute('data-scroll-index'));
-    if (scrollFraction >= (index - 1) / paragraphs.length) {
+    if (scrollFraction >= (index - 2) / paragraphs.length) {
       currentIndex = index;
     } else {
       break;
     }
   }
 
-  const message = `You're currently viewing paragraph ${currentIndex} out of ${paragraphs.length}.`;
+  const message = `You're currently viewing paragraph ${currentIndex - 1} out of ${paragraphs.length}.`;
   document.getElementById('scroll-message').textContent = message;
 });
 
