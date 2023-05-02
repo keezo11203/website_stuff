@@ -12,32 +12,6 @@ fetch('https://ipapi.co/json/')
     welcomeElement.textContent = welcomeMessage;
     document.querySelector('.scoreboard').appendChild(welcomeElement);
 
-    // Add scroll-snapping to paragraphs in the about section
-    const paragraphs = document.querySelectorAll('.about > p');
-    paragraphs.forEach((p, i) => {
-      p.style.scrollSnapAlign = 'start';
-      p.setAttribute('data-scroll-index', i + 1);
-      if (i === 0) {
-        p.classList.add('current');
-      }
-    });
-
-    window.addEventListener('scroll', () => {
-      let currentParagraph = document.querySelector('.about > p.current');
-      let nextParagraph = currentParagraph.nextElementSibling;
-      if (nextParagraph !== null) {
-        let rect = nextParagraph.getBoundingClientRect();
-        if (rect.top <= window.innerHeight * 0.5) {
-          currentParagraph.classList.remove('current');
-          nextParagraph.classList.add('current');
-          let currentIndex = parseInt(nextParagraph.getAttribute('data-scroll-index'));
-          if (currentIndex === 1) {
-            document.getElementById('scroll-message').textContent = currentParagraph.textContent;
-          }
-        }
-      }
-    });
-
     let counter = parseInt(localStorage.getItem('counter')) || 1;
     localStorage.setItem('counter', counter + 1);
     document.getElementById('counter').textContent = getCounterWithSuffix(counter);

@@ -6,8 +6,6 @@ body {
   scroll-snap-type: y mandatory;
 }
 
-
-
 .scoreboard {
   background-color: #3498db;
   color: white;
