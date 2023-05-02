@@ -56,3 +56,4 @@ function getCounterWithSuffix(count) {
   }
   return count + suffix;
 }
+  });
