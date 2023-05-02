@@ -6,16 +6,7 @@ body {
   scroll-snap-type: y mandatory;
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-}
 
-.fade-in.visible {
-  opacity: 1;
-  transform: none;
-}
 
 .scoreboard {
   background-color: #3498db;
