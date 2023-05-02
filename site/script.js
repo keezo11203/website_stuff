@@ -31,8 +31,9 @@ fetch('https://ipapi.co/json/')
           currentParagraph.classList.remove('current');
           nextParagraph.classList.add('current');
           let currentIndex = parseInt(nextParagraph.getAttribute('data-scroll-index'));
-          const message = `You're currently viewing paragraph ${currentIndex} out of ${paragraphs.length}.`;
-          document.getElementById('scroll-message').textContent = message;
+          if (currentIndex === 1) {
+            document.getElementById('scroll-message').textContent = currentParagraph.textContent;
+          }
         }
       }
     });
