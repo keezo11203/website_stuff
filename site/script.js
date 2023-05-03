@@ -27,4 +27,11 @@ fetch('https://ipapi.co/json/')
       }
       return count + suffix;
     }
+
+const SpotifyWebApi = require('spotify-web-api-js');
+const spotifyApi = new SpotifyWebApi({
+  clientId: 'cf712205ce704bfeb199a9697eb5107f',
+  clientSecret: 'f35f636bff24d539172fcb7951a3764'
+});
+
   });
