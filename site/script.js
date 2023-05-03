@@ -31,9 +31,9 @@ fetch('https://ipapi.co/json/')
       console.log('Error:', error);
     });
 
-    let counter = parseInt(localStorage.getItem('counter')) || 1;
+    let counter = parseInt(localStorage.getItem('counter')) || 0;
     localStorage.setItem('counter', counter + 1);
-    document.getElementById('counter').textContent = getCounterWithSuffix(counter);
+    document.getElementById('counter').textContent = getCounterWithSuffix(counter + 1);
 
     function getCounterWithSuffix(count) {
       let suffix;
