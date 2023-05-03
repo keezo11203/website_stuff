@@ -36,14 +36,17 @@ fetch('https://ipapi.co/json/')
     document.getElementById('counter').textContent = getCounterWithSuffix(counter);
 
     function getCounterWithSuffix(count) {
-      let suffix = 'th';
-      if (count % 10 === 1 && count % 100 !== 11) {
-        suffix = 'st';
-      } else if (count % 10 === 2 && count % 100 !== 12) {
-        suffix = 'nd';
-      } else if (count % 10 === 3 && count % 100 !== 13) {
-        suffix = 'rd';
+      let suffix;
+      if (count === 1) {
+        suffix = "st";
+      } else if (count === 2) {
+        suffix = "nd";
+      } else if (count === 3) {
+        suffix = "rd";
+      } else {
+        suffix = "th";
       }
       return count + suffix;
     }
+    
   });
