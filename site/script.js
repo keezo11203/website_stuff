@@ -34,4 +34,9 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret: 'f35f636bff24d539172fcb7951a3764'
 });
 
+spotifyApi.getAccessToken().then(token => {
+  // Use the token to make API requests
+});
+
+
   });
