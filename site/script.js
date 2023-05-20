@@ -12,25 +12,6 @@ fetch('https://ipapi.co/json/')
     welcomeElement.textContent = welcomeMessage;
     document.querySelector('.scoreboard').appendChild(welcomeElement);
 
-    // Get user's currently playing track on Spotify
-    fetch('https://api.spotify.com/v1/me/player/currently-playing', {
-      headers: {
-        'Authorization': `Bearer ${accessToken}`
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      const song = data.item.name;
-      const artist = data.item.artists[0].name;
-      const spotifyMessage = `Right now, I'm listening to ${song} by ${artist}, give it a listen!`;
-      const spotifyElement = document.createElement('p');
-      spotifyElement.textContent = spotifyMessage;
-      document.querySelector('.scoreboard').appendChild(spotifyElement);
-    })
-    .catch(error => {
-      console.log('Error:', error);
-    });
-
     let counter = parseInt(localStorage.getItem('counter')) || 0;
     localStorage.setItem('counter', counter + 1);
     document.getElementById('counter').textContent = getCounterWithSuffix(counter + 1);
